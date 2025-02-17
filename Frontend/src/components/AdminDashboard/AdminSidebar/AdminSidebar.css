@@ -1,0 +1,72 @@
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 60px; /* Aligné avec le header */
+    left: 0;
+    height: calc(100vh - 60px);
+    background-color: #000000;
+    color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+/* Sidebar réduite */
+.sidebar.collapsed {
+    width: 60px;
+}
+
+/* Sidebar étendue */
+.sidebar.expanded {
+    width: 200px;
+}
+
+/* Bouton de toggle */
+.toggle-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    cursor: pointer;
+    align-self: flex-end;
+}
+
+/* Menu */
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.menu-item {
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.menu-item i {
+    font-size: 20px;
+    margin-right: 10px;
+    transition: margin 0.3s ease;
+}
+
+/* Lorsque la sidebar est réduite, cacher le texte */
+.sidebar.collapsed .menu-label {
+    display: none;
+}
+
+.sidebar.collapsed .menu-item i {
+    margin-right: 0;
+}
+
+.menu-item:hover {
+    background: #34495e;
+}
